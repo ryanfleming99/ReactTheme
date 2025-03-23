@@ -53,6 +53,12 @@
       "default": "Ready for 4x Growth?"
     },
     {
+      "name": "cta_one_link",
+      "label": "CTA One Link",
+      "type": "text",
+      "default": "https://jam7.com/new/contact-us"
+   },
+    {
       "name": "image_two",
       "label": "Image 2",
       "type": "image",
@@ -93,6 +99,12 @@
       "default": "Convert Like Never Before"
     },
     {
+      "name": "cta_two_link",
+      "label": "CTA Two Link",
+      "type": "text",
+      "default": "https://jam7.com/new/contact-us"
+   },
+    {
       "name": "image_three",
       "label": "Image 3",
       "type": "image",
@@ -132,6 +144,12 @@
       "type": "text",
       "default": "Get Ahead Fast"
     },
+    {
+      "name": "cta_three_link",
+      "label": "CTA Three Link",
+      "type": "text",
+      "default": "https://jam7.com/new/contact-us"
+   },
     {
       "name": "lead_gen_title",
       "label": "Lead Gen Title",

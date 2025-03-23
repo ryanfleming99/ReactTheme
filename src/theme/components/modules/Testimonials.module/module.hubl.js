@@ -1,4 +1,3 @@
-// RyansTheme/src/theme/components/modules/Testimonials/module.hubl.js
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.testimonials-lead-gen__card');
   const progressBar = document.querySelector('.testimonials-lead-gen__progress-bar');
@@ -13,24 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card, index) => {
       card.classList.remove('active', 'behind');
       card.setAttribute('aria-hidden', 'true');
-      if (card.classList.contains('testimonials-lead-gen__card--lead-gen')) {
-        if (index === currentCard && currentCard === cards.length - 1) {
-          card.style.visibility = 'visible';
-          card.classList.add('active');
-          card.setAttribute('aria-hidden', 'false');
-        } else {
-          card.style.visibility = 'hidden';
-          card.classList.add('behind');
-        }
-      } else {
-        if (index === currentCard) {
-          card.classList.add('active');
-          card.setAttribute('aria-hidden', 'false');
-        } else if (index < currentCard) {
-          card.classList.add('behind');
-        }
+      card.style.visibility = 'hidden'; // Ensure inactive cards are hidden by default
+
+      if (index === currentCard) {
+        card.classList.add('active');
+        card.setAttribute('aria-hidden', 'false');
+        card.style.visibility = 'visible'; // Only make the active card visible
+      } else if (index < currentCard) {
+        card.classList.add('behind');
       }
     });
+
+    // On mobile, ensure last card (data-card="4") remains visible
+    if (isMobile() && currentCard === cards.length - 1) {
+      cards[currentCard].style.visibility = 'visible';
+    }
 
     const progress = ((currentCard + 1) / cards.length) * 100;
     progressBar.style.width = `${progress}%`;
@@ -42,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     autoplayInterval = setInterval(() => {
       if (currentCard < cards.length - 1) {
         currentCard++;
+        updateCardVisibility();
       } else {
-        currentCard = 0;
+        stopAutoplay(); // Stop autoplay when reaching the last card
       }
-      updateCardVisibility();
     }, 3000);
   };
 
@@ -59,34 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleScroll = (e) => {
     e.preventDefault();
     if (isScrolling) return;
+
     const delta = e.deltaY > 0 ? 1 : -1;
     if (delta > 0 && currentCard < cards.length - 1) {
       currentCard++;
     } else if (delta < 0 && currentCard > 0) {
       currentCard--;
     }
+
     updateCardVisibility();
-    if (currentCard === cards.length - 1) {
-      setTimeout(() => (isScrolling = false), 0);
-    } else {
-      isScrolling = true;
-      setTimeout(() => (isScrolling = false), 1000);
-    }
+    isScrolling = true;
+    setTimeout(() => (isScrolling = false), 1000);
   };
 
   const handleKeydown = (e) => {
-    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-      if (currentCard < cards.length - 1) {
-        currentCard++;
-        updateCardVisibility();
-        if (isMobile()) stopAutoplay();
-      }
-    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-      if (currentCard > 0) {
-        currentCard--;
-        updateCardVisibility();
-        if (isMobile()) stopAutoplay();
-      }
+    if ((e.key === 'ArrowDown' || e.key === 'ArrowRight') && currentCard < cards.length - 1) {
+      currentCard++;
+      updateCardVisibility();
+      if (isMobile()) stopAutoplay();
+    } else if ((e.key === 'ArrowUp' || e.key === 'ArrowLeft') && currentCard > 0) {
+      currentCard--;
+      updateCardVisibility();
+      if (isMobile()) stopAutoplay();
     }
   };
 
