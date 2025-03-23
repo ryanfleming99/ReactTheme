@@ -47,18 +47,23 @@ My approach for this task was to use the **waterfall methodology**:
    cd ReactTheme
    ```
 3. Install dependencies:
+
    ```bash
    npm install
-   If you plan to use local development, install HubSpot CLI globally:
    ```
+
+   If you plan to use local development, install HubSpot CLI globally:
+
    ```bash
    npm install -g @hubspot/cli
    Verify that HubSpot CLI is installed:
    ```
+
    ```bash
    hs --version
    Use hs project watch (2025 updated CLI) to make live updates to the theme.
    ```
+
    ```bash
    If you're unsure about the HubSpot CLI, visit the official documentation. To make updates to this theme, you will need to have hs auth and a personal key, as well as access to the project.
    ```
