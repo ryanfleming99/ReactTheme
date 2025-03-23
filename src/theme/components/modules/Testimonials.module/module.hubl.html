@@ -1,0 +1,99 @@
+<!-- RyansTheme/src/theme/components/modules/Testimonials/module.hubl.html -->
+<section
+  class="testimonials-lead-gen"
+  aria-label="Testimonials and Lead Generation"
+  style="background-image: url({{ module.background_image.src }}); background-size:cover; background-repeat:no-repeat; background-color:white;"
+>
+  <div class="testimonials-dropdown-container">
+    {% react_partial 'testimonials_dropdown_partial' num_of_cards=module.num_of_cards %}
+  </div>
+  <!-- Rest of your cards -->
+  <div class="testimonials-lead-gen__cards" role="region" aria-label="Testimonials Slider">
+    <!-- Card 1 -->
+    <article class="testimonials-lead-gen__card" data-card="1" aria-hidden="true">
+      <div class="testimonials-lead-gen__card-inner">
+        <div class="testimonials-lead-gen__image-wrapper">
+          <img src="{{ module.image_one.src }}" alt="{{ module.image_one.alt }}" loading="lazy" width="240" height="240" />
+        </div>
+        <div class="testimonials-lead-gen__content">
+          <blockquote class="testimonials-lead-gen__quote">
+            <p>{{ module.testimonial_one }}</p>
+            <cite>{{ module.attribution_one }}</cite>
+          </blockquote>
+          <div class="testimonials-align">
+            <button class="testimonials-lead-gen__cta">{{ module.cta_one }}</button>
+            <div class="testimonials-person">
+              <p>{{ module.testimonial_name_one }}</p>
+              <p>{{ module.testimonial_company_one }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Card 2 -->
+    <article class="testimonials-lead-gen__card" data-card="2" aria-hidden="true">
+      <div class="testimonials-lead-gen__card-inner">
+        <div class="testimonials-lead-gen__image-wrapper">
+          <img src="{{ module.image_two.src }}" alt="{{ module.image_two.alt }}" loading="lazy" width="240" height="240" />
+        </div>
+        <div class="testimonials-lead-gen__content">
+          <blockquote class="testimonials-lead-gen__quote">
+            <p>{{ module.testimonial_two }}</p>
+            <cite>{{ module.attribution_two }}</cite>
+          </blockquote>
+          <div class="testimonials-align">
+            <button class="testimonials-lead-gen__cta">{{ module.cta_two }}</button>
+            <div class="testimonials-person">
+              <p>{{ module.testimonial_name_two }}</p>
+              <p>{{ module.testimonial_company_two }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Card 3 -->
+    <article class="testimonials-lead-gen__card" data-card="3" aria-hidden="true">
+      <div class="testimonials-lead-gen__card-inner">
+        <div class="testimonials-lead-gen__image-wrapper">
+          <img src="{{ module.image_three.src }}" alt="{{ module.image_three.alt }}" loading="lazy" width="240" height="240" />
+        </div>
+        <div class="testimonials-lead-gen__content">
+          <blockquote class="testimonials-lead-gen__quote">
+            <p>{{ module.testimonial_three }}</p>
+            <cite>{{ module.attribution_three }}</cite>
+          </blockquote>
+          <div class="testimonials-align">
+            <button class="testimonials-lead-gen__cta">{{ module.cta_three }}</button>
+            <div class="testimonials-person">
+              <p>{{ module.testimonial_name_three }}</p>
+              <p>{{ module.testimonial_company_three }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Card 4 (Lead Gen) -->
+    <article class="testimonials-lead-gen__card testimonials-lead-gen__card--lead-gen card-with-form" data-card="4" aria-hidden="true">
+      <div class="testimonials-lead-gen__card-inner form-input-card">
+        <h2>{{ module.lead_gen_title }}</h2>
+        <div class="testimonials-lead-gen__description">
+          {{ module.lead_gen_description }}
+        </div>
+        {% if module.form_field.form_id %}
+          {% form "lead_gen_form" form_to_use="{{ module.form_field.form_id }}" %}
+        {% else %}
+          <p>Select a form in the editor.</p>
+        {% endif %}
+      </div>
+    </article>
+  </div>
+
+  <div class="testimonials-lead-gen__progress">
+    <div class="testimonials-lead-gen__progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  {{ require_css("./module.hubl.css") }}
+  {{ require_js("./module.hubl.js") }}
+  {{ require_js(get_asset_url("theme/partials/dist/bundle.js")) }}
+
+</section>

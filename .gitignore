@@ -1,0 +1,28 @@
+# Node modules (you don't need to track dependencies)
+node_modules/
+
+# Build and dist folders (HubSpot compiles these)
+dist/
+build/
+
+# HubSpot project-specific files (optional)
+hsproject.json
+cms-assets.json
+
+# Environment files (if any)
+.env
+.env.local
+.env.development
+.env.production
+
+# MacOS system files
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git-related
+.git/

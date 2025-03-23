@@ -1,0 +1,156 @@
+
+[
+    {
+      "name": "background_image",
+      "label": "Background Image",
+      "type": "image",
+      "required": false
+    },
+    {
+      "name": "num_of_cards",
+      "label": "Number of Cards",
+      "type": "number",
+      "default": 3
+    },
+    {
+      "name": "image_one",
+      "label": "Image 1",
+      "type": "image",
+      "required": false,
+      "responsive": true,
+      "resizable": true,
+      "default": {
+        "size_type": "auto",
+        "src": "https://49575153.fs1.hubspotusercontent-na1.net/hubfs/49575153/man-smiling.png",
+        "alt": "man-smiling",
+        "loading": "lazy",
+        "width": 177,
+        "height": 265
+      }
+    },
+    {
+      "name": "testimonial_one",
+      "label": "Testimonial One",
+      "type": "richtext",
+      "default": "<span>“Our organic traffic is now 4 times higher, and our paid ads are converting 30% better. The results speak for themselves - we're seeing real growth”</span>"
+    },
+    {
+      "name": "testimonial_name_one",
+      "label": "Testimonial Name One",
+      "type": "text",
+      "default": "Lee Daniels"
+    },
+    {
+      "name": "testimonial_company_one",
+      "label": "Testimonial Company One",
+      "type": "text",
+      "default": "CEO, HELPLAND"
+    },
+    {
+      "name": "cta_one",
+      "label": "CTA One",
+      "type": "text",
+      "default": "Ready for 4x Growth?"
+    },
+    {
+      "name": "image_two",
+      "label": "Image 2",
+      "type": "image",
+      "required": false,
+      "responsive": true,
+      "resizable": true,
+      "default": {
+        "size_type": "auto",
+        "src": "https://49575153.fs1.hubspotusercontent-na1.net/hubfs/49575153/woman-looking-forward.png",
+        "alt": "woman-looking-forward",
+        "loading": "lazy",
+        "width": 172,
+        "height": 265
+      }
+    },
+    {
+      "name": "testimonial_two",
+      "label": "Testimonial Two",
+      "type": "richtext",
+      "default": "<span>“Their human expertise guided our strategy, while their AI enhanced our execution. Jam 7 have helped us develop campaigns that resonate and convert.”</span>"
+    },
+    {
+      "name": "testimonial_name_two",
+      "label": "Testimonial Name Two",
+      "type": "text",
+      "default": "Elsa Cheshire"
+    },
+    {
+      "name": "testimonial_company_two",
+      "label": "Testimonial Company Two",
+      "type": "text",
+      "default": "Marketing Lead, Azured UK"
+    },
+    {
+      "name": "cta_two",
+      "label": "CTA Two",
+      "type": "text",
+      "default": "Convert Like Never Before"
+    },
+    {
+      "name": "image_three",
+      "label": "Image 3",
+      "type": "image",
+      "required": false,
+      "responsive": true,
+      "resizable": true,
+      "default": {
+        "size_type": "auto",
+        "src": "https://49575153.fs1.hubspotusercontent-na1.net/hubfs/49575153/man-looking-forward.png",
+        "alt": "man-looking-forward",
+        "loading": "lazy",
+        "width": 177,
+        "height": 265
+      }
+    },
+    {
+      "name": "testimonial_three",
+      "label": "Testimonial Three",
+      "type": "richtext",
+      "default": "<span>“Most impressively, their AI-enhanced Growth Agent solution was operational in record time, giving us a significant competitive edge in our Go-to-Market strategy.”</span>"
+    },
+    {
+      "name": "testimonial_name_three",
+      "label": "Testimonial Name Three",
+      "type": "text",
+      "default": "Andrew Carr"
+    },
+    {
+      "name": "testimonial_company_three",
+      "label": "Testimonial Company Three",
+      "type": "text",
+      "default": "MD, Camwood"
+    },
+    {
+      "name": "cta_three",
+      "label": "CTA Three",
+      "type": "text",
+      "default": "Get Ahead Fast"
+    },
+    {
+      "name": "lead_gen_title",
+      "label": "Lead Gen Title",
+      "type": "text",
+      "default": "Proven Results, Ready for You"
+    },
+    {
+      "name": "lead_gen_description",
+      "label": "Lead Gen Description",
+      "type": "richtext",
+      "default": "<span>Ready to scale your B2B tech business? Our proven approach—fueled by human expertise and cutting-edge AI—delivers</span>"
+    },
+    {
+      "name": "form_field",
+      "label": "Form",
+      "type": "form",
+      "default": {
+        "response_type": "inline",
+        "message": "Thanks for submitting the form."
+      }
+    }
+  ]

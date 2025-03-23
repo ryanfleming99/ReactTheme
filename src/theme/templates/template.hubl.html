@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page_meta.html_title }}</title>
+  {{ require_css("../css/main.css") }}
+  {{ standard_header_includes }}
+</head>
+<body>
+  <main>
+    {% dnd_area "main_content" label="Main Content Area" %}
+    
+    {% end_dnd_area %}
+  </main>
+  {{ require_js("../js/main.js") }}
+  {{ standard_footer_includes }}
+</body>
+</html>
