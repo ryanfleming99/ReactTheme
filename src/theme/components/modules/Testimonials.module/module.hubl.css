@@ -349,6 +349,9 @@ form .form-columns-2 input {
     visibility: visible;
     display: none;
     height: auto;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
   }
 
   .testimonials-lead-gen__image-wrapper img {
@@ -371,10 +374,6 @@ form .form-columns-2 input {
     transform: none;
     height: auto;
     max-height: -webkit-fill-available;
-  }
-
-  .testimonials-lead-gen__card.behind {
-    display: none;
   }
 
   .testimonials-lead-gen__card-inner {
