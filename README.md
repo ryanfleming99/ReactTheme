@@ -66,9 +66,7 @@ My approach for this task was to use the **waterfall methodology**:
    Use hs project watch (2025 updated CLI) to make live updates to the theme.
    ```
 
-   ```bash
    If you are unsure about the HubSpot CLI, visit the official documentation. To make updates to this theme, you will need to have hs auth and a personal key, as well as access to the project.
-   ```
 
 ## Measuring Success
 
