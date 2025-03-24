@@ -1,5 +1,7 @@
 ## Approach to the Problem
 
+**Design**:
+
 **Goal**:  
 Deliver a working GitHub repo which showcases a reusable, customizable, accessible, and fully responsive HubSpot module. This module uses React state management for filtering, sorting, or visualizing data. It is optimized for core web vitals, implements lazy loading, and focuses on a design that will improve user engagement and conversion rates by showcasing client success stories in an interactive format.
 
@@ -39,7 +41,7 @@ My approach for this task was to use the **waterfall methodology**:
    - **Node.js** (version 14 or above)
    - **npm** (Node Package Manager)
    - **HubSpot CMS** account for integration
-   - **HubSpot CLI**
+   - **HubSpot CLI** for accesing your account in HubSpot and pushing live updates
 
 2. Clone the repository:
    ```bash
@@ -65,7 +67,7 @@ My approach for this task was to use the **waterfall methodology**:
    ```
 
    ```bash
-   If you're unsure about the HubSpot CLI, visit the official documentation. To make updates to this theme, you will need to have hs auth and a personal key, as well as access to the project.
+   If you are unsure about the HubSpot CLI, visit the official documentation. To make updates to this theme, you will need to have hs auth and a personal key, as well as access to the project.
    ```
 
 ## Measuring Success
