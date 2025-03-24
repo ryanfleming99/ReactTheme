@@ -1,6 +1,6 @@
 ## Approach to the Problem
 
-**Design**:
+**Design**: Figma - https://www.figma.com/design/b5s8T2GURVkZRmmjYjzUi1/Hubl-%26-React-Modular-System?node-id=5-58&t=ReepOXiZn4Gqt50s-1
 
 **Goal**:  
 Deliver a working GitHub repo which showcases a reusable, customizable, accessible, and fully responsive HubSpot module. This module uses React state management for filtering, sorting, or visualizing data. It is optimized for core web vitals, implements lazy loading, and focuses on a design that will improve user engagement and conversion rates by showcasing client success stories in an interactive format.
